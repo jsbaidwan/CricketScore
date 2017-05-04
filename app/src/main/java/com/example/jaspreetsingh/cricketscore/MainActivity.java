@@ -31,7 +31,9 @@ public class MainActivity extends AppCompatActivity {
     }
     public void wicket (View view)   {
         wicket = wicket + 1;
-        dispalyWicket(wicket);
+        if (wicket<11) {
+            dispalyWicket(wicket);
+        }
     }
 
     public void displayScore(int score)  {
