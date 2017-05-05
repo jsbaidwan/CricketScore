@@ -21,15 +21,21 @@ public class MainActivity extends AppCompatActivity {
     }
     public void oneRun(View v)  {
         score = score + 1;
-        displayScore(score);
+        if (wicket<10) {
+            displayScore(score);
+        }
     }
     public void twoRun(View v)  {
         score = score + 2;
-        displayScore(score);
+        if (wicket<10) {
+            displayScore(score);
+        }
     }
     public void fourRun(View v)  {
         score = score + 4;
-        displayScore(score);
+        if (wicket<10) {
+            displayScore(score);
+        }
     }
     public void sixRun(View v)  {
         score = score + 6;
