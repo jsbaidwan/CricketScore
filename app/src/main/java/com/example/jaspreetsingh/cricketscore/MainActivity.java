@@ -13,6 +13,12 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
     }
+    public void wicket (View view)   {
+        wicket = wicket + 1;
+        if (wicket<11) {
+            displayWicket(wicket);
+        }
+    }
     public void oneRun(View v)  {
         score = score + 1;
         displayScore(score);
@@ -27,14 +33,11 @@ public class MainActivity extends AppCompatActivity {
     }
     public void sixRun(View v)  {
         score = score + 6;
-        displayScore(score);
-    }
-    public void wicket (View view)   {
-        wicket = wicket + 1;
-        if (wicket<11) {
-            displayWicket(wicket);
+        if (wicket<10) {
+            displayScore(score);
         }
     }
+
     public void reset (View view)   {
         score = 0;
         wicket = 0;
