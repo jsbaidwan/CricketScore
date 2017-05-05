@@ -32,15 +32,21 @@ public class MainActivity extends AppCompatActivity {
     public void wicket (View view)   {
         wicket = wicket + 1;
         if (wicket<11) {
-            dispalyWicket(wicket);
+            displayWicket(wicket);
         }
+    }
+    public void reset (View view)   {
+        score = 0;
+        wicket = 0;
+        displayScore(score);
+        displayWicket(wicket);
     }
 
     public void displayScore(int score)  {
         TextView totalScore = (TextView) findViewById(R.id.run_text_view);
         totalScore.setText(String.valueOf(score));
     }
-    public void dispalyWicket(int wicket)   {
+    public void displayWicket(int wicket)   {
         TextView totalWicket = (TextView) findViewById(R.id.wicket_text_view);
         totalWicket.setText(String.valueOf(wicket));
     }
