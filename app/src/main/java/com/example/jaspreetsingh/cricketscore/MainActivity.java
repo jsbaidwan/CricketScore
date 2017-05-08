@@ -2,6 +2,7 @@ package com.example.jaspreetsingh.cricketscore;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.Gravity;
 import android.view.View;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -15,15 +16,22 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
     }
 
+    /**
+     * Calculate the number of wickets
+     */
     public void wicket (View view)   {
         wicket = wicket + 1;
         if (wicket<11) {
             displayWicket(wicket);
         }
         if(wicket==10){
-            Toast.makeText(getApplicationContext(),"ALL OUT",Toast.LENGTH_SHORT).show();
+            Toast.makeText(getApplicationContext(),"ALL OUT",Toast.LENGTH_LONG).show();
         }
     }
+
+    /**
+     * Increase the number of runs
+     */
     public void oneRun(View v)  {
         score = score + 1;
         if (wicket<10) {
@@ -49,6 +57,9 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
+    /**
+     * Reset the Score and the wickets
+     */
     public void reset (View view)   {
         score = 0;
         wicket = 0;
@@ -56,6 +67,9 @@ public class MainActivity extends AppCompatActivity {
         displayWicket(wicket);
     }
 
+    /**
+     * Display score of the team
+     */
     public void displayScore(int score)  {
         TextView totalScore = (TextView) findViewById(R.id.run_text_view);
         totalScore.setText(String.valueOf(score));
